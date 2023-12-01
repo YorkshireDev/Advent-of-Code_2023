@@ -46,26 +46,28 @@ public class Main {
                 char current = input.charAt(i);
                 sentence.append(current);
 
-                for (int wIndex = 0; wIndex < words.length; wIndex++) {
-
-                    if (sentence.toString().contains(words[wIndex])) {
-
-                        char wIndexToChar = (char) ('0' + (wIndex + 1));
-
-                        if (firstNum == null) firstNum = wIndexToChar;
-                        lastNum = wIndexToChar;
-
-                        sentence = new StringBuilder().append(current);
-                        break;
-
-                    }
-
-                }
-
                 if (Character.isDigit(current)) {
 
                     if (firstNum == null) firstNum = current;
                     lastNum = current;
+
+                } else {
+
+                    for (int wIndex = 0; wIndex < words.length; wIndex++) {
+
+                        if (sentence.toString().contains(words[wIndex])) {
+
+                            char wIndexToChar = (char) ('0' + (wIndex + 1));
+
+                            if (firstNum == null) firstNum = wIndexToChar;
+                            lastNum = wIndexToChar;
+
+                            sentence = new StringBuilder().append(current);
+                            break;
+
+                        }
+
+                    }
 
                 }
 
