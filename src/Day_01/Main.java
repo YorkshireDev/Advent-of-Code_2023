@@ -6,6 +6,9 @@ import java.util.List;
 
 public class Main {
 
+    private static final String[] words =
+            new String[] { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+
     private static List<String> read() throws IOException {
 
         String srcFile = System.getProperty("user.dir") +
@@ -36,9 +39,28 @@ public class Main {
             Character firstNum = null;
             Character lastNum = null;
 
+            StringBuilder sentence = new StringBuilder();
+
             for (int i = 0; i < input.length(); i++) {
 
                 char current = input.charAt(i);
+                sentence.append(current);
+
+                for (int wIndex = 0; wIndex < words.length; wIndex++) {
+
+                    if (sentence.toString().contains(words[wIndex])) {
+
+                        char wIndexToChar = (char) ('0' + (wIndex + 1));
+
+                        if (firstNum == null) firstNum = wIndexToChar;
+                        lastNum = wIndexToChar;
+
+                        sentence = new StringBuilder().append(current);
+                        break;
+
+                    }
+
+                }
 
                 if (Character.isDigit(current)) {
 
