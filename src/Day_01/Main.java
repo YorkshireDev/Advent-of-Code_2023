@@ -44,7 +44,6 @@ public class Main {
             for (int i = 0; i < input.length(); i++) {
 
                 char current = input.charAt(i);
-                sentence.append(current);
 
                 if (Character.isDigit(current)) {
 
@@ -52,6 +51,8 @@ public class Main {
                     lastNum = current;
 
                 } else {
+
+                    sentence.append(current);
 
                     for (int wIndex = 0; wIndex < words.length; wIndex++) {
 
