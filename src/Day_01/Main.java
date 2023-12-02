@@ -1,34 +1,14 @@
 package Day_01;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
+
+import static common.Read.read;
 
 public class Main {
 
     private static final String[] words =
             new String[] { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-
-    private static List<String> read() throws IOException {
-
-        String srcFile = System.getProperty("user.dir") +
-                File.separator +
-                "src" +
-                File.separator +
-                "Day_01" +
-                File.separator +
-                "input.txt";
-
-        List<String> inputList = new ArrayList<>();
-        String line;
-
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(srcFile));
-
-        while ((line = bufferedReader.readLine()) != null) inputList.add(line);
-
-        return inputList;
-
-    }
 
     private static int calculate(List<String> inputList) {
 
@@ -86,7 +66,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        System.out.println(calculate(read()));
+        System.out.println(calculate(read("Day_01", "input.txt")));
 
     }
 
