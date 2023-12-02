@@ -1,6 +1,5 @@
 package Day_01;
 
-import java.io.*;
 import java.util.List;
 
 import static common.Read.read;
