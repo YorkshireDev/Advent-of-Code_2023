@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Read<T> {
+public class Read {
 
     /**
      * Read in a file into a list of strings. Each line of the file maps to an index in the list.
