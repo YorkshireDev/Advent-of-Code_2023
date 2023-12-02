@@ -4,7 +4,7 @@ import java.util.List;
 
 import static common.Read.read;
 
-public class Main {
+public class Main_Part_1 {
 
     private static int calculate(List<String> inputList, int[] bagContentArr) {
 
