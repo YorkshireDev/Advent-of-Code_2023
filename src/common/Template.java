@@ -2,6 +2,8 @@ package common;
 
 import java.util.List;
 
+import static common.Read.read;
+
 public class Template {
 
     private static int calculate(List<String> inputList) {
@@ -18,7 +20,7 @@ public class Template {
 
         sTime = System.nanoTime();
 
-        System.out.println(calculate(Read.read("Day_XX", "input.txt")));
+        System.out.println(calculate(read("Day_XX", "input.txt")));
 
         eTime = System.nanoTime() - sTime;
         eTime /= 1_000_000.0d;

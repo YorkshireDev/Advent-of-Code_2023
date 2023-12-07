@@ -1,7 +1,5 @@
 package Day_03;
 
-import common.Read;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,7 +103,7 @@ public class Main_Part_2 {
 
         sTime = System.nanoTime();
 
-        System.out.println(calculate(Read.read("Day_03", "input.txt")));
+        System.out.println(calculate(read("Day_03", "input.txt")));
 
         eTime = System.nanoTime() - sTime;
         eTime /= 1_000_000.0d;
