@@ -34,15 +34,19 @@ public class Main_Part_2 {
 
     public static void main(String[] args) {
 
+        List<String> inputList = read("Day_06", "input.txt");
+
         double sTime, eTime;
+        long answer;
 
         sTime = System.nanoTime();
 
-        System.out.println(calculate(read("Day_06", "input.txt")));
+        answer = calculate(inputList);
 
         eTime = System.nanoTime() - sTime;
         eTime /= 1_000_000.0d;
 
+        System.out.println("Answer: " + answer);
         System.out.println();
         System.out.println("Time Taken: " + eTime + "ms");
 

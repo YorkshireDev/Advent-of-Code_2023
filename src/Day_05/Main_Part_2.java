@@ -1,11 +1,14 @@
 package Day_05;
 
-import common.Read;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import static common.Read.read;
 
 public class Main_Part_2 {
 
@@ -173,15 +176,19 @@ public class Main_Part_2 {
 
     public static void main(String[] args) {
 
+        List<String> inputList = read("Day_05", "input.txt");
+
         double sTime, eTime;
+        long answer;
 
         sTime = System.nanoTime();
 
-        System.out.println(calculate(Read.read("Day_05", "input.txt")));
+        answer = calculate(inputList);
 
         eTime = System.nanoTime() - sTime;
         eTime /= 1_000_000.0d;
 
+        System.out.println("Answer: " + answer);
         System.out.println();
         System.out.println("Time Taken: " + eTime + "ms");
 

@@ -52,15 +52,19 @@ public class Main_Part_1 {
 
         int[] bagContentArr = new int[] { 12, 13, 14 }; // [ RED, GREEN, BLUE ]
 
+        List<String> inputList = read("Day_02", "input.txt");
+
         double sTime, eTime;
+        int answer;
 
         sTime = System.nanoTime();
 
-        System.out.println(calculate(read("Day_02", "input.txt"), bagContentArr));
+        answer = calculate(inputList, bagContentArr);
 
         eTime = System.nanoTime() - sTime;
         eTime /= 1_000_000.0d;
 
+        System.out.println("Answer: " + answer);
         System.out.println();
         System.out.println("Time Taken: " + eTime + "ms");
 
