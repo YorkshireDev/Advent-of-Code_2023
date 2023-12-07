@@ -16,7 +16,7 @@ public class Main_Part_2 {
 
     /**
      *  My CPU is faster at brute forcing it than I am at coming up with a good solution ;)
-     *  Took me 171926.769829ms or just short of 3 minutes :)
+     *  Took me 171926.769829ms or just short of 3 minutes on a 5800X3D :)
      */
     private static class VerySillySolution implements Runnable {
 
@@ -38,7 +38,7 @@ public class Main_Part_2 {
         @Override
         public void run() {
 
-            result = Integer.MAX_VALUE;
+            result = Long.MAX_VALUE;
 
             long sNumCount = sInit;
             long sIncrement = 0;
@@ -135,7 +135,7 @@ public class Main_Part_2 {
 
     private static long calculate(List<String> inputList) {
 
-        long result = Integer.MAX_VALUE;
+        long result = Long.MAX_VALUE;
 
         List<Long> seedList = getSeedList(inputList);
 
