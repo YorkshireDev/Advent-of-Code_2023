@@ -1,5 +1,7 @@
 package Day_02;
 
+import common.Read;
+
 import java.util.List;
 
 import static common.Read.read;
@@ -52,7 +54,17 @@ public class Main_Part_1 {
 
         int[] bagContentArr = new int[] { 12, 13, 14 }; // [ RED, GREEN, BLUE ]
 
-        System.out.println(calculate(read("Day_02", "input.txt"), bagContentArr));
+        double sTime, eTime;
+
+        sTime = System.nanoTime();
+
+        System.out.println(calculate(Read.read("Day_02", "input.txt"), bagContentArr));
+
+        eTime = System.nanoTime() - sTime;
+        eTime /= 1_000_000.0d;
+
+        System.out.println();
+        System.out.println("Time Taken: " + eTime + "ms");
 
     }
 
