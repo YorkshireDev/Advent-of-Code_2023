@@ -1,7 +1,9 @@
 package common;
 
-import java.io.*;
-import java.util.ArrayList;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
 public class Read {
@@ -22,18 +24,8 @@ public class Read {
                 File.separator +
                 srcFile;
 
-        List<String> inputList = new ArrayList<>();
-        String line;
-
-        try {
-
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(fullPath));
-
-            while ((line = bufferedReader.readLine()) != null) inputList.add(line);
-
-        } catch (IOException e) { throw new RuntimeException(e); }
-
-        return inputList;
+        try { return Files.readAllLines(Path.of(fullPath)); }
+        catch (IOException e) { throw new RuntimeException(e); }
 
     }
 
