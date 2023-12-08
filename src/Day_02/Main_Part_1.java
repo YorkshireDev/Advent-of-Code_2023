@@ -65,7 +65,6 @@ public class Main_Part_1 {
         eTime /= 1_000_000.0d;
 
         System.out.println("Answer: " + answer);
-        System.out.println();
         System.out.println("Time Taken: " + eTime + "ms");
 
     }
