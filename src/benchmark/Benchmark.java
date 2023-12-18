@@ -64,6 +64,11 @@ public class Benchmark {
         Day_06.Main_Part_2.main(new String[0]);
         System.out.println();
 
+        System.out.println("---- Day_07 - Part 1 ----");
+        System.out.println();
+        Day_07.Main_Part_1.main(new String[0]);
+        System.out.println();
+
     }
 
 }
