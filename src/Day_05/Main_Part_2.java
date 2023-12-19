@@ -176,7 +176,7 @@ public class Main_Part_2 {
 
     public static void main(String[] args) {
 
-        List<String> inputList = read("Day_05", "input.txt");
+        List<String> inputList = read("Day_05", "Input.TXT");
 
         double sTime, eTime;
         long answer;

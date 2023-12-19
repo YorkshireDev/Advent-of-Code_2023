@@ -99,7 +99,7 @@ public class Main_Part_2 {
 
     public static void main(String[] args) {
 
-        List<String> inputList = read("Day_03", "input.txt");
+        List<String> inputList = read("Day_03", "Input.TXT");
 
         double sTime, eTime;
         int answer;

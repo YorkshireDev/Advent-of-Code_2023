@@ -163,7 +163,7 @@ public class Main_Part_1 {
 
     public static void main(String[] args) {
 
-        List<String> inputList = read("Day_07", "input.txt");
+        List<String> inputList = read("Day_07", "Input.TXT");
 
         double sTime, eTime;
         int answer;

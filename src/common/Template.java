@@ -15,7 +15,7 @@
 //
 //    public static void main(String[] args) {
 //
-//        List<String> inputList = read("Day_XX", "input.txt");
+//        List<String> inputList = read("Day_XX", "Input.TXT");
 //
 //        double sTime, eTime;
 //        int answer;

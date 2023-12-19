@@ -52,7 +52,7 @@ public class Main_Part_1 {
 
         int[] bagContentArr = new int[] { 12, 13, 14 }; // [ RED, GREEN, BLUE ]
 
-        List<String> inputList = read("Day_02", "input.txt");
+        List<String> inputList = read("Day_02", "Input.TXT");
 
         double sTime, eTime;
         int answer;

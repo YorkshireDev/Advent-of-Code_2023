@@ -47,7 +47,7 @@ public class Main_Part_1 {
 
     public static void main(String[] args) {
 
-        List<String> inputList = read("Day_08", "input.txt");
+        List<String> inputList = read("Day_08", "Input.TXT");
 
         double sTime, eTime;
         int answer;
