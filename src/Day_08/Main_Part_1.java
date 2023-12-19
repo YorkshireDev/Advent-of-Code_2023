@@ -18,9 +18,6 @@ public class Main_Part_1 {
 
         Map<String, String[]> nodeMap = new HashMap<>();
 
-        String currentNode = "AAA";
-        String nodeEnd = "ZZZ";
-
         for (int i = 1; i < inputList.size(); i++) {
 
             String[] rootSplit = inputList.get(i).split(" = ");
@@ -29,6 +26,9 @@ public class Main_Part_1 {
             nodeMap.put(rootSplit[0], elementSplit);
 
         }
+
+        String currentNode = "AAA";
+        String nodeEnd = "ZZZ";
 
         while (!currentNode.equals(nodeEnd)) {
 
