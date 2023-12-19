@@ -1,17 +1,12 @@
 package benchmark;
 
-/**
- * Run every test one after the other, printing the result. May as well manually add them since it's only 2 per day.
- * <p>
- * Each test benchmarks itself and will print the time taken in milliseconds.
- */
 public class Benchmark {
 
     public static void main(String[] args) {
 
         System.out.println("---- Day_01 - Part 1 + 2 ----");
         System.out.println();
-        Day_01.Main.main(args);
+        Day_01.Main_Part_1_Part_2.main(args);
         System.out.println();
 
         System.out.println("---- Day_02 - Part 1 ----");
@@ -82,6 +77,11 @@ public class Benchmark {
         System.out.println("---- Day_08 - Part 2 ----");
         System.out.println();
         Day_08.Main_Part_2.main(args);
+        System.out.println();
+
+        System.out.println("---- Day_09 - Part 1 ----");
+        System.out.println();
+        Day_09.Main_Part_1.main(args);
         System.out.println();
 
     }

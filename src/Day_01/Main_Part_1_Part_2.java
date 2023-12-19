@@ -4,7 +4,7 @@ import java.util.List;
 
 import static common.Read.read;
 
-public class Main {
+public class Main_Part_1_Part_2 {
 
     private static final String[] words =
             new String[] { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
@@ -65,7 +65,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<String> inputList = read("Day_01", "input.txt");
+        List<String> inputList = read("Day_01", "Input.TXT");
 
         double sTime, eTime;
         int answer;
