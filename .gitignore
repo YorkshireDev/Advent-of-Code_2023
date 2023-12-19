@@ -30,3 +30,4 @@ bin/
 
 ### Custom ###
 /src/**/Input.TXT
+/src/common/Input_Password.TXT
