@@ -74,6 +74,11 @@ public class Benchmark {
         Day_07.Main_Part_2.main(args);
         System.out.println();
 
+        System.out.println("---- Day_08 - Part 1 ----");
+        System.out.println();
+        Day_08.Main_Part_1.main(args);
+        System.out.println();
+
     }
 
 }
