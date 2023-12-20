@@ -1,10 +1,17 @@
 package common;
 
+import javax.crypto.NoSuchPaddingException;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.List;
+
+import static common.EncryptDecryptInput.decrypt;
 
 public class Read {
 
@@ -24,7 +31,18 @@ public class Read {
                 File.separator +
                 srcFile;
 
-        try { return Files.readAllLines(Path.of(fullPath)); }
+        Path path = Path.of(fullPath);
+
+        if (! Files.exists(path)) {
+            try {
+                decrypt();
+            } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidKeySpecException |
+                     InvalidKeyException | InvalidAlgorithmParameterException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        try { return Files.readAllLines(path); }
         catch (IOException e) { throw new RuntimeException(e); }
 
     }
